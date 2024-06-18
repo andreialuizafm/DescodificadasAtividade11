@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<title>Animações</title>
+
+</head>
+
+<style>
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: block;
+        
+    }
+
+body{
+    margin:0;
+    padding:0;
+    display: block;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: plum;
+
+}
+.item{
+    margin-top:600px;
+    width: 1000px;
+    height: 1000px;
+    background:#e9396b;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: item 0.6s linear infinite;
+}
+@keyframes item{
+    0%{
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+.item::before{
+    content:'';
+    position: absolute;
+    height:1000px;
+    width: 1000px;
+    background: #e9396b;
+    top: -50%;
+    border-radius: 600px;
+    box-shadow: -10px 10px 120px #e9396b;
+}
+
+.item::after{
+    content:'';
+    position: absolute;
+    height:1000px;
+    width: 1000px;
+    background: #e9396b;
+    right: -50%;
+    border-radius: 600px;
+    box-shadow: -10px 10px 120px #e9396b;
+
+}
+h1 {
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 100px ;
+    font: small-caps bold 24px/1 sans-serif purple;
+
+}
+h3 {
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 80px ;
+    font: small-caps bold 24px/1 sans-serif purple;
+
+}
+
+</style>
+
+<body> 
+   
+   <h1>Descodificadas</h1><br>
+    <h3>Eu amo tecnologia!</h3><br>
+    <section class = 'container'>
+    <div class="item"><br></div></section>
+   
+</body>
+
+</html>
